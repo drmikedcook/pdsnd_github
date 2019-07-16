@@ -2,8 +2,11 @@ import time
 import pandas as pd
 import numpy as np
 
-#  Reads three .csv files (chicago.csv, new_york_city.csv and
-#  washington.read_csv) into the dictionary CITY_DATA
+"""
+Reads  in rideshare data in three cities from three .csv files
+(chicago.csv, new_york_city.csv and washington.read_csv)
+Reads data into the dictionary CITY_DATA
+"""
 
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
