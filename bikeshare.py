@@ -229,9 +229,13 @@ def display_data(df):
         print('Invalid answer. Lines of data not printed')
 
 
+"""
+This is the main() function which calls all the other functions
+in a specified order.
 
+This is the section of the program that I found the most difficult.
 
-
+"""
 def main():
     city, month, day = get_filters()
     df = load_data(city, month, day)
