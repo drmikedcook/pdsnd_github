@@ -164,14 +164,16 @@ No output of than print statements
 
 def trip_duration_stats(df):
 
-    print('\nCalculating average and total travel times...\n')
+    print('\nCalculating average, median and total travel times...\n')
 
     tot_travel_time = df['Trip Duration'].sum()
     ave_travel_time = df['Trip Duration'].mean()
+    median_travel_time = df['Trip Duration'].median()
 
     print('The total travel time is: ', tot_travel_time)
     print('The average travel time is: ', ave_travel_time)
-
+    print('The median travel time is: ', median_travel_time)
+    
 
 
 """
@@ -213,16 +215,16 @@ def display_data(df):
     question = input('Would like like to see the first five lines of the data? ')
     count = 0
 
-    if question in ('Yes', 'yes', 'y', 'No', 'no', 'n'):
-        if question in ('Yes', 'yes', 'y'):
+    if question in ('Yes', 'yes', 'y', 'No', 'no', 'n', 'NO'):
+        if question in ('Yes', 'yes', 'y', 'YES'):
             print(df.head(5))
 
 
-            while question in ('Yes', 'yes', 'y'):
+            while question in ('Yes', 'yes', 'y', 'YES'):
                 question = input('Would like like to see the five more lines of data? ')
                 count += 5
 
-                if question in ('Yes', 'yes', 'y'):
+                if question in ('Yes', 'yes', 'y', 'YES'):
                     print(df[count:count+5])
 
     else:
