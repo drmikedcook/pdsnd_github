@@ -161,14 +161,16 @@ No output of than print statements
 
 def trip_duration_stats(df):
 
-    print('\nCalculating average and total travel times...\n')
+    print('\nCalculating average, median and total travel times...\n')
 
     tot_travel_time = df['Trip Duration'].sum()
     ave_travel_time = df['Trip Duration'].mean()
+    median_travel_time = df['Trip Duration'].median()
 
     print('The total travel time is: ', tot_travel_time)
     print('The average travel time is: ', ave_travel_time)
-
+    print('The median travel time is: ', median_travel_time)
+    
 
 
 """
