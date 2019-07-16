@@ -210,16 +210,16 @@ def display_data(df):
     question = input('Would like like to see the first five lines of the data? ')
     count = 0
 
-    if question in ('Yes', 'yes', 'y', 'No', 'no', 'n'):
-        if question in ('Yes', 'yes', 'y'):
+    if question in ('Yes', 'yes', 'y', 'No', 'no', 'n', 'NO'):
+        if question in ('Yes', 'yes', 'y', 'YES'):
             print(df.head(5))
 
 
-            while question in ('Yes', 'yes', 'y'):
+            while question in ('Yes', 'yes', 'y', 'YES'):
                 question = input('Would like like to see the five more lines of data? ')
                 count += 5
 
-                if question in ('Yes', 'yes', 'y'):
+                if question in ('Yes', 'yes', 'y', 'YES'):
                     print(df[count:count+5])
 
     else:
